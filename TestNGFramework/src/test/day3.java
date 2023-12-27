@@ -5,62 +5,66 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class day3 {
-@BeforeClass
-public void beforeClass() {
-	System.out.println("Before executig any method in day3 class");
-}
-	
+import com.beust.jcommander.Parameter;
 
-@AfterClass
-public void afterClass() {
-	System.out.println("after executing all methods in day3 class");
-}
-	@Test
-	public void WebLoginCarLoan() {
-		//seleium
-		System.out.println("Weblogincar");
+public class day3 {
+	@BeforeClass
+	public void beforeClass() {
+		System.out.println("Before executig any method in day3 class");
 	}
-	
-	
+
+	@AfterClass
+	public void afterClass() {
+		System.out.println("after executing all methods in day3 class");
+	}
+
+	@Parameters({"URL"})
+	@Test
+	public void WebLoginCarLoan(String urlname) {
+		// selenium
+		System.out.println("Weblogincar");
+		System.out.println(urlname);
+	}
+
 	@BeforeMethod
 	public void beforeEveryMethod() {
 		System.out.println("I will execute before every test method in day3 class");
 	}
-	
-	@Test(groups= {"smoke"})
+
+	@Test(groups = { "smoke" })
 	public void MobileLoginCarLoan() {
-		//Appium
+		// Appium
 		System.out.println("MobileloginCar");
 	}
-	
+
 	@BeforeSuite
 	public void BeforSuite() {
-	System.out.println("I am no. 1");	
+		System.out.println("I am no. 1");
 	}
-	
-	
+
 	@AfterMethod
 	public void aftereveryMethod() {
 		System.out.println("I will execute after every method in day3 class.");
 	}
-	
-	@Test(enabled=false)
+
+	@Test(enabled = false)
 	public void MobileSigninCarLoan() {
-		//Appium
+		// Appium
 		System.out.println("Mobile SIGNIN");
 	}
-	@Test(timeOut=4000)
+
+	@Test(timeOut = 4000)
 	public void MobileSignoutCarLoan() {
-		//Appium
+		// Appium
 		System.out.println("MobileSignoutCar");
 	}
-	
-	@Test(dependsOnMethods={"WebLoginCarLoan","MobileSignoutCarLoan"})
+
+	@Test(dependsOnMethods = { "WebLoginCarLoan", "MobileSignoutCarLoan" })
 	public void APICarLoan() {
-		//Rest API Automation
+		// Rest API Automation
 		System.out.println("APILoginCar");
 	}
 }
