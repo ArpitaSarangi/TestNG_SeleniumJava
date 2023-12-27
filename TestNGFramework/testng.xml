@@ -9,7 +9,7 @@
 			</methods>
 			</class>
 			<class name="test.day2" />
-			<class name='test.day4' />
+			<class name="test.day4" />
 		</classes>
 	</test> <!-- Test -->
 
