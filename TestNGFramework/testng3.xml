@@ -4,7 +4,7 @@
 	<test name="Smoke">
 	<groups>
 	<run>
-	<include name="smoke"/>
+	<exclude name="smoke"/>
 	</run>
 	</groups>
 		<classes>

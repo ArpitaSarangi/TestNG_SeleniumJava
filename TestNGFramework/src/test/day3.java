@@ -47,18 +47,18 @@ public void afterClass() {
 		System.out.println("I will execute after every method in day3 class.");
 	}
 	
-	@Test
+	@Test(enabled=false)
 	public void MobileSigninCarLoan() {
 		//Appium
 		System.out.println("Mobile SIGNIN");
 	}
-	@Test
+	@Test(timeOut=4000)
 	public void MobileSignoutCarLoan() {
 		//Appium
 		System.out.println("MobileSignoutCar");
 	}
 	
-	@Test
+	@Test(dependsOnMethods={"WebLoginCarLoan","MobileSignoutCarLoan"})
 	public void APICarLoan() {
 		//Rest API Automation
 		System.out.println("APILoginCar");
