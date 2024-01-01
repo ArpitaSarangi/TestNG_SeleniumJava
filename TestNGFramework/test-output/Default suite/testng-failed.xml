@@ -6,7 +6,9 @@
       <class name="test.day3">
         <methods>
           <include name="afterClass"/>
+          <include name="MobileSignoutCarLoan"/>
           <include name="BeforSuite"/>
+          <include name="APICarLoan"/>
           <include name="WebLoginCarLoan"/>
           <include name="beforeClass"/>
           <include name="aftereveryMethod"/>
