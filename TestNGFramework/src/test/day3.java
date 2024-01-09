@@ -30,15 +30,19 @@ public class day3 {
 		System.out.println(key);
 	}
 
+	
 	@BeforeMethod
 	public void beforeEveryMethod() {
 		System.out.println("I will execute before every test method in day3 class");
+	
 	}
 
+	
 	@Test(groups = { "smoke" })
 	public void MobileLoginCarLoan() {
 		// Appium
 		System.out.println("MobileloginCar");
+		
 	}
 
 	@BeforeSuite
